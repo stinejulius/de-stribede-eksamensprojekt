@@ -1,5 +1,11 @@
 @use '@/style/base' as *;
 
+div.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
 h1 {
     font-family: $citrus-gothic-solid;
     font-size: 36px;
