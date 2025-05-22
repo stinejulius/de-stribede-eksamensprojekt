@@ -9,9 +9,10 @@
 </template>
 
 <style lang="scss" scoped>
-@use '@/style' as *;
+@use '@/style/base' as *;
 
 h1 {
+  background-color: $orange;
   color: $red;
 }
 </style>

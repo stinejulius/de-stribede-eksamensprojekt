@@ -1,6 +1,10 @@
-@use '@/style' as *;
+@use '@/style/base' as *;
 
 body {
     height: 100%;
     background-color: $blue;
+}
+
+.bold {
+    font-weight: 700;
 }
