@@ -12,7 +12,7 @@
 @use '@/style/base' as *;
 
 h1 {
-  background-color: $orange;
-  color: $red;
+  background-color: orange;
+  color: red;
 }
 </style>
