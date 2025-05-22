@@ -1,10 +1,56 @@
 @use '@/style/base' as *;
 
-body {
-    height: 100%;
-    background-color: blue;
+h1 {
+    font-family: $citrus-gothic-solid;
+    font-size: 36px;
+    color: $primary-text;
 }
 
+h1.sub-title {
+    font-size: 26px;
+    color: $primary-text;
+}
+
+h2 {
+    font-family: $arsenal;
+    font-size: 26px;
+    font-weight: 700;
+    color: $primary-text;
+}
+
+h2.slogan {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: $arsenal;
+    font-size: 20px;
+    font-weight: 700;
+    color: $primary-text;
+}
+
+p {
+    font-family: $roboto;
+    font-size: 16px;
+    color: $primary-text;
+}
+
+p.small {
+    font-size: 14px;
+}
+
+p.img-credit {
+    font-size: 12px;
+    color: $img-credit;
+}
+
+
+// Utility classes
 .bold {
     font-weight: 700;
+}
+
+.white-color {
+    color: $secondary-text;
 }
