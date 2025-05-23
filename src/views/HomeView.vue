@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import FootballLiveCountdown from '../components/FootballLiveCountdown.vue'
+import NewsSection from '../components/NewsSection.vue'
+import SponsorBanner from '../components/SponsorBanner.vue';
 import { useBreakpoints } from '@/composables/breakpoints';
 
 const { isMobile, isDesktop } = useBreakpoints();
@@ -31,8 +33,6 @@ const { isMobile, isDesktop } = useBreakpoints();
     <div class="container">
       <FootballLiveCountdown />
       <FootballLiveCountdown />
-      <!-- FootballLiveCountdown herrer -->
-      <!-- FootballLiveCountdown kvinder -->
     </div>
 
     <div>
@@ -68,7 +68,7 @@ const { isMobile, isDesktop } = useBreakpoints();
     </div>
 
     <div>
-      <!-- NewsSection -->
+       <NewsSection />
     </div>
 
     <div>
@@ -76,7 +76,7 @@ const { isMobile, isDesktop } = useBreakpoints();
         <h3> Tak til vores sponsorer </h3>
       </div>
 
-      <!-- SponsorBanner -->
+      <SponsorBanner />
     </div>
   </main>
 </template>
