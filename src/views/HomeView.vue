@@ -67,7 +67,7 @@ const { isMobile, isDesktop } = useBreakpoints();
       <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
     </div>
 
-    <div>
+    <div class="container">
        <NewsSection />
     </div>
 
