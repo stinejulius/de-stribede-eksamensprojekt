@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import FootballLiveCountdown from '../components/FootballLiveCountdown.vue'
 import { useBreakpoints } from '@/composables/breakpoints';
 
 const { isMobile, isDesktop } = useBreakpoints();
@@ -27,9 +28,11 @@ const { isMobile, isDesktop } = useBreakpoints();
       </p>
     </div>
 
-    <div>
+    <div class="container">
+      <FootballLiveCountdown />
+      <FootballLiveCountdown />
       <!-- FootballLiveCountdown herrer -->
-       <!-- FootballLiveCountdown kvinder -->
+      <!-- FootballLiveCountdown kvinder -->
     </div>
 
     <div>
