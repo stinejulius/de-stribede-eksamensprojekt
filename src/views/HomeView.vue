@@ -10,14 +10,16 @@ const { isMobile, isDesktop } = useBreakpoints();
 </script>
 
 <template>
-  <main>
-    <video loop muted autoplay playsinline poster="../assets/images/footballfans-kids-flags.webp" src=""></video>
-    <div class="container">
-      <div>
-        <h1> DE STRIBEDE </h1>
-        <h1 class="sub-title"> OB's OFFICIELLE FANKLUB </h1>
+  <main id="content">
+    <div id="content-introduction">
+      <video id="hero-video" loop muted autoplay playsinline poster="../assets/images/footballfans-kids-flags.webp" src=""></video>
+      <div class="container" id="headline-titles">
+        <div id="h1" >
+          <h1> DE STRIBEDE </h1>
+          <h1 class="sub-title"> OB's OFFICIELLE FANKLUB </h1>
+        </div>
+        <h2 class="slogan"> Stemning der rækker længere end Fyn </h2>
       </div>
-      <h2 class="slogan"> Stemning der rækker længere end Fyn </h2>
     </div>
 
     <div class="container">
@@ -30,13 +32,13 @@ const { isMobile, isDesktop } = useBreakpoints();
       </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="content-countdowns">
       <FootballLiveCountdown />
       <FootballLiveCountdown />
     </div>
 
-    <div>
-      <div class="container">
+    <div id="content-become-a-member">
+      <div class="container" id="content-become-a-member-inner">
 
         <h2> Bliv en del af De Stribede i dag! </h2>
 
@@ -51,8 +53,8 @@ const { isMobile, isDesktop } = useBreakpoints();
             </p>
           </div>
 
-          <div v-if="isDesktop">
-            <img src="../assets/images/footballfans-kids-flags.webp" alt="">
+          <div v-if="isDesktop" class="fans-box">
+            <img class="fans-box-img" src="../assets/images/footballfans-kids-flags.webp" alt="">
             <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
           </div>
         </div>
@@ -62,17 +64,17 @@ const { isMobile, isDesktop } = useBreakpoints();
       </div>
     </div>
 
-    <div v-if="isMobile" class="container">
-      <img src="../assets/images/footballfans-kids-flags.webp" alt="">
+    <div v-if="isMobile" class="container fans-box">
+      <img class="fans-box-img" src="../assets/images/footballfans-kids-flags.webp" alt="">
       <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
     </div>
 
     <div class="container">
-       <NewsSection />
+      <NewsSection />
     </div>
 
     <div>
-      <div class="container">
+      <div class="container" id="sponsor-box">
         <h3> Tak til vores sponsorer </h3>
       </div>
 
@@ -83,4 +85,73 @@ const { isMobile, isDesktop } = useBreakpoints();
 
 <style lang="scss" scoped>
 @use '@/style/base' as *;
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+
+#content-introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hero-video {
+  max-height: 200px;
+  height: 100%;
+}
+
+#headline-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  gap: 30px;
+}
+
+#h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#content-countdowns {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#content-become-a-member {
+  width: 100%;
+  padding: 30px 0;
+  background-color: $tertiary;
+}
+
+#content-become-a-member-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.fans-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.fans-box-img {
+  border-radius: 5px;
+}
+
+#sponsor-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
 </style>
