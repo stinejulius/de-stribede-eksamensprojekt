@@ -4,7 +4,7 @@
 <template>
     <div id="card">
         <img id="img" src="../assets/images/away-ob-vs-kolding.webp" alt="">
-        <p class="bold">
+        <p class="bold" id="news-headline">
             Kom med på sæsonens sidste udebanetur
         </p>
         <!-- Link til bestemt nyhedsartikelside -->
@@ -26,7 +26,14 @@
 }
 
 #img {
+    max-width: 294px;
     width: 100%;
     border-radius: 5px;
+}
+
+#news-headline {
+    max-width: 294px;
+    width: 100%;
+    text-align: center;
 }
 </style>
