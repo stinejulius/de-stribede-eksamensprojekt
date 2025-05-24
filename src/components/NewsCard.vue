@@ -1,13 +1,33 @@
 <script setup>
+import { RouterLink } from 'vue-router';
+
+const props = defineProps ({
+    imgFile: {
+        type: String,
+        required: true,
+    },
+    imgAlt: {
+        type: String,
+        required: true,
+    },
+    headline: {
+        type: String,
+        required: true,
+    },
+    buttonLink: {
+        type: String,
+        required: true,
+    },
+})
 </script>
 
 <template>
     <div id="card">
-        <img id="img" src="../assets/images/away-ob-vs-kolding.webp" alt="">
+        <img id="img" :src="imgFile" :alt="imgAlt">
         <p class="bold" id="news-headline">
-            Kom med på sæsonens sidste udebanetur
+            {{ headline }}
         </p>
-        <!-- Link til bestemt nyhedsartikelside -->
+        <RouterLink :to="buttonLink"> Læs nyhed </RouterLink>
     </div>
 </template>
 

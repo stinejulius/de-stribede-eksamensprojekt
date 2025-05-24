@@ -1,10 +1,19 @@
 <script setup>
 import NewsCard from '../components/NewsCard.vue'
+
+const props = defineProps({
+    newsArticles: {
+        type: Array,
+        required: true,
+    }
+})
 </script>
 
 <template>
     <div id="news-slider-section">
-        <NewsCard />
+        <NewsCard v-for="newsArticle in newsArticles" :img-file="newsArticle.imgFile" :img-alt="newsArticle.imgAlt"
+            :headline="newsArticle.headline" :button-link="newsArticle.buttonLink" />
+            
         <div id="dot-indicators">
             <img class="dot-indicator" src="../assets/illustrations/active-indicator-dot.svg" alt="">
             <img class="dot-indicator" src="../assets/illustrations/indicator-dot.svg" alt="">
