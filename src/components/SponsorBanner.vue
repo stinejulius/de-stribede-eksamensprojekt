@@ -1,8 +1,10 @@
 <script setup>
+import HorizontalMarquee from '../components/HorizontalMarquee.vue'
 </script>
 
 <template>
-    <div id="sponsor-banner">
+
+    <HorizontalMarquee>
         <img class="sponsor-img" src="../assets/images/logo-albani.png" alt="">
         <img class="sponsor-img" src="../assets/images/logo-løvbjerg.png" alt="">
         <img class="sponsor-img" src="../assets/images/logo-unisport.png" alt="">
@@ -11,13 +13,13 @@
         <img class="sponsor-img" src="../assets/images/logo-energi-fyn.png" alt="">
         <img class="sponsor-img" src="../assets/images/logo-odense-bowlinghal.png" alt="">
         <img class="sponsor-img" src="../assets/images/logo-shay-inks.png" alt="">
-    </div>
+    </HorizontalMarquee>
 </template>
 
 <style lang="scss" scoped>
 @use '@/style/base' as *;
 
-#sponsor-banner {
+.sponsor-banner {
     display: flex;
     align-items: center;
     padding: 5px 20px;
@@ -25,7 +27,6 @@
 }
 
 .sponsor-img {
-    max-width: 100px;
     width: 100px;
 }
 </style>
