@@ -33,8 +33,8 @@ const { isMobile, isDesktop } = useBreakpoints();
     </div>
 
     <div class="container" id="content-countdowns">
-      <FootballLiveCountdown />
-      <FootballLiveCountdown />
+      <FootballLiveCountdown :gender="'Herre'" :league="120" :season="2024" :team="405" />
+      <FootballLiveCountdown :gender="'Kvinder'" :league="638" :season="2024" :team="13984" />
     </div>
 
     <div id="content-become-a-member">
