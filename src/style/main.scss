@@ -40,7 +40,7 @@ h3 {
     margin: 0px;
 }
 
-p {
+p, a {
     font-family: $roboto;
     font-size: 16px;
     color: $primary-text;
@@ -64,4 +64,30 @@ p.img-credit {
 
 .white-color {
     color: $secondary-text;
+}
+
+
+// Button Styles
+
+.button-primary {
+    @include standard-button;
+    color: $secondary-text;
+    background-color: $primary-btn;
+    border: 3px solid $primary-btn;
+
+    &:hover {
+        color: $primary-btn;
+        background-color: $primary-btn-hover;
+    }
+}
+
+.button-secondary {
+    @include standard-button;
+    color: $primary;
+    background-color: $secondary-btn;
+    border: 3px solid $secondary-btn;
+
+    &:hover {
+        background-color: $tertiary;
+    }
 }

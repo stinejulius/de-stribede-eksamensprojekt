@@ -1,0 +1,9 @@
+@mixin standard-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 44px;
+    border-radius: 5px;
+    text-decoration: none;
+}

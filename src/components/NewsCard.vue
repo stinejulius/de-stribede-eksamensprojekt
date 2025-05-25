@@ -27,7 +27,7 @@ const props = defineProps({
         <p class="bold news-headline">
             {{ headline }}
         </p>
-        <RouterLink :to="buttonLink"> Læs nyhed </RouterLink>
+        <RouterLink class="button-secondary bold" :to="buttonLink"> Læs nyhed </RouterLink>
     </div>
 </template>
 

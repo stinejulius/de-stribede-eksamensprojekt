@@ -59,7 +59,7 @@ const { isMobile, isDesktop } = useBreakpoints();
           </div>
         </div>
 
-        <RouterLink class to="/membership"> Bliv medlem </RouterLink>
+        <RouterLink class="button-primary bold" to="/membership"> Bliv medlem </RouterLink>
 
       </div>
     </div>
