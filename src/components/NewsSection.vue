@@ -3,7 +3,7 @@ import newsOne from '../assets/images/away-ob-vs-kolding.webp'
 import newsTwo from '../assets/images/fans-banners-platform.webp'
 import newsThree from '../assets/images/stadium-game-from-platform.webp'
 
-import NewsSectionSlider from '../components/NewsSectionSlider.vue'
+import NewsCarousel from '../components/NewsCarousel.vue'
 import NewsCard from '../components/NewsCard.vue'
 import { useBreakpoints } from '@/composables/breakpoints';
 
@@ -32,20 +32,36 @@ const newsArticles = [
 </script>
 
 <template>
-    <div id="card">
+    <section id="card">
         <h2 class="white-color"> Nyheder </h2>
-        <NewsSectionSlider v-if="isMobile" :news-articles="newsArticles" />
+
+        <div v-if="isMobile" id="news-slider-section">
+            <NewsCarousel>
+                <NewsCard v-for="newsArticle in newsArticles" :img-file="newsArticle.imgFile"
+                    :img-alt="newsArticle.imgAlt" :headline="newsArticle.headline"
+                    :button-link="newsArticle.buttonLink" />
+            </NewsCarousel>
+        </div>
+
         <div v-if="isDesktop">
             <NewsCard v-for="newsArticle in newsArticles" :img-file="newsArticle.imgFile" :img-alt="newsArticle.imgAlt"
                 :headline="newsArticle.headline" :button-link="newsArticle.buttonLink" />
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use '@/style/base' as *;
 
-#card {
+#news-slider-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+section#card {
     display: flex;
     flex-direction: column;
     align-items: center;

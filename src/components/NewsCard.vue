@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 
-const props = defineProps ({
+const props = defineProps({
     imgFile: {
         type: String,
         required: true,
@@ -22,9 +22,9 @@ const props = defineProps ({
 </script>
 
 <template>
-    <div id="card">
-        <img id="img" :src="imgFile" :alt="imgAlt">
-        <p class="bold" id="news-headline">
+    <div class="news-card">
+        <img :src="imgFile" :alt="imgAlt">
+        <p class="bold news-headline">
             {{ headline }}
         </p>
         <RouterLink :to="buttonLink"> Læs nyhed </RouterLink>
@@ -34,7 +34,7 @@ const props = defineProps ({
 <style lang="scss" scoped>
 @use '@/style/base' as *;
 
-#card {
+.news-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,17 +43,17 @@ const props = defineProps ({
 
     border-radius: 5px;
     background-color: $secondary;
-}
 
-#img {
-    max-width: 294px;
-    width: 100%;
-    border-radius: 5px;
-}
+    img {
+        max-width: 294px;
+        width: 100%;
+        border-radius: 5px;
+    }
 
-#news-headline {
-    max-width: 294px;
-    width: 100%;
-    text-align: center;
+    .news-headline {
+        max-width: 294px;
+        width: 100%;
+        text-align: center;
+    }
 }
 </style>

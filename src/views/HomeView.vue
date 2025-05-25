@@ -34,7 +34,7 @@ const { isMobile, isDesktop } = useBreakpoints();
 
     <div class="container" id="content-countdowns">
       <FootballLiveCountdown :gender="'Herre'" :league="120" :season="2024" :team="405" />
-      <FootballLiveCountdown :gender="'Kvinder'" :league="638" :season="2024" :team="13984" />
+      <FootballLiveCountdown :gender="'Kvinde'" :league="638" :season="2024" :team="13984" />
     </div>
 
     <div id="content-become-a-member">
@@ -78,7 +78,7 @@ const { isMobile, isDesktop } = useBreakpoints();
         <h3> Tak til vores sponsorer </h3>
       </div>
 
-      <SponsorBanner />
+      <!-- <SponsorBanner /> -->
     </div>
   </main>
 </template>
