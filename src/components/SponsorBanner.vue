@@ -1,18 +1,18 @@
 <script setup>
-import HorizontalMarquee from '../components/HorizontalMarquee.vue'
+import HorizontalMarquee from '@/components/HorizontalMarquee.vue'
 </script>
 
 <template>
 
     <HorizontalMarquee>
-        <img class="sponsor-img" src="../assets/images/logo-albani.png" alt="">
-        <img class="sponsor-img" src="../assets/images/logo-løvbjerg.png" alt="">
-        <img class="sponsor-img" src="../assets/images/logo-unisport.png" alt="">
-        <img class="sponsor-img" src="../assets/images/logo-carls-jr.png" alt="">
-        <img class="sponsor-img" src="../assets/images/logo-ok.png" alt="">
-        <img class="sponsor-img" src="../assets/images/logo-energi-fyn.png" alt="">
-        <img class="sponsor-img" src="../assets/images/logo-odense-bowlinghal.png" alt="">
-        <img class="sponsor-img" src="../assets/images/logo-shay-inks.png" alt="">
+        <img class="sponsor-img" src="@/assets/images/logo-albani.png" alt="">
+        <img class="sponsor-img" src="@/assets/images/logo-løvbjerg.png" alt="">
+        <img class="sponsor-img" src="@/assets/images/logo-unisport.png" alt="">
+        <img class="sponsor-img" src="@/assets/images/logo-carls-jr.png" alt="">
+        <img class="sponsor-img" src="@/assets/images/logo-ok.png" alt="">
+        <img class="sponsor-img" src="@/assets/images/logo-energi-fyn.png" alt="">
+        <img class="sponsor-img" src="@/assets/images/logo-odense-bowlinghal.png" alt="">
+        <img class="sponsor-img" src="@/assets/images/logo-shay-inks.png" alt="">
     </HorizontalMarquee>
 </template>
 

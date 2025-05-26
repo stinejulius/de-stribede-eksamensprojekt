@@ -1,6 +1,6 @@
 <script setup>
-import MobileHeader from '../components/MobileHeader.vue'
-import DesktopHeader from '../components/DesktopHeader.vue'
+import MobileHeader from './mobile/MobileHeader.vue'
+import DesktopHeader from './desktop/DesktopHeader.vue'
 import { useBreakpoints } from '@/composables/breakpoints';
 
 const { isMobile, isDesktop } = useBreakpoints();

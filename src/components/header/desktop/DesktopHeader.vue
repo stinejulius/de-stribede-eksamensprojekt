@@ -5,7 +5,7 @@
     <header>
         <div class="container navigation">
             <RouterLink class="logo">
-                <img src="../assets/illustrations/logo-only-main-text.svg" alt="">
+                <img src="@/assets/illustrations/logo-only-main-text.svg" alt="">
             </RouterLink>
 
             <div class="navigation-pages">
@@ -24,6 +24,7 @@
                 <RouterLink class="link-to-page">
                     <button>
                         Fanhjørnet
+                        <img src="@/assets/illustrations/desktop-menu-dropdown-arrow-white.svg" alt="">
                     </button>
                 </RouterLink>
 
@@ -36,6 +37,7 @@
                 <RouterLink class="link-to-page">
                     <button>
                         Om os
+                        <img src="@/assets/illustrations/desktop-menu-dropdown-arrow-white.svg" alt="">
                     </button>
                 </RouterLink>
 
@@ -48,11 +50,11 @@
 
             <div class="navigation-icons">
                 <RouterLink>
-                    <img src="../assets/illustrations/login-icon.svg" alt="">
+                    <img src="@/assets/illustrations/login-icon.svg" alt="">
                 </RouterLink>
 
                 <RouterLink>
-                    <img src="../assets/illustrations/shopping-basket-icon.svg" alt="">
+                    <img src="@/assets/illustrations/shopping-basket-icon.svg" alt="">
                 </RouterLink>
             </div>
         </div>

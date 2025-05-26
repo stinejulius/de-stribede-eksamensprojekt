@@ -1,10 +1,10 @@
 <script setup>
-import newsOne from '../assets/images/away-ob-vs-kolding.webp'
-import newsTwo from '../assets/images/fans-banners-platform.webp'
-import newsThree from '../assets/images/stadium-game-from-platform.webp'
+import newsOne from '@/assets/images/away-ob-vs-kolding.webp'
+import newsTwo from '@/assets/images/fans-banners-platform.webp'
+import newsThree from '@/assets/images/stadium-game-from-platform.webp'
 
-import NewsCarousel from '../components/NewsCarousel.vue'
-import NewsCard from '../components/NewsCard.vue'
+import NewsCarousel from './NewsCarousel.vue'
+import NewsCard from './NewsCard.vue'
 import { useBreakpoints } from '@/composables/breakpoints';
 
 const { isMobile, isDesktop } = useBreakpoints();

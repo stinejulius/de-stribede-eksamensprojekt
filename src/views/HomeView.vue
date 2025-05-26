@@ -1,8 +1,8 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import FootballLiveCountdown from '../components/FootballLiveCountdown.vue'
-import NewsSection from '../components/NewsSection.vue'
-import SponsorBanner from '../components/SponsorBanner.vue';
+import FootballLiveCountdown from '@/components/FootballLiveCountdown.vue'
+import NewsSection from '@/components/news/NewsSection.vue';
+import SponsorBanner from '@/components/SponsorBanner.vue';
 import { useBreakpoints } from '@/composables/breakpoints';
 
 const { isMobile, isDesktop } = useBreakpoints();
@@ -12,7 +12,7 @@ const { isMobile, isDesktop } = useBreakpoints();
 <template>
   <main id="content">
     <div id="content-introduction">
-      <video id="hero-video" loop muted autoplay playsinline poster="../assets/images/footballfans-kids-flags.webp"
+      <video id="hero-video" loop muted autoplay playsinline poster="@/assets/images/footballfans-kids-flags.webp"
         src=""></video>
       <div class="container" id="headline-titles">
         <div id="h1">
@@ -55,7 +55,7 @@ const { isMobile, isDesktop } = useBreakpoints();
           </div>
 
           <div v-if="isDesktop" class="fans-box">
-            <img class="fans-box-img" src="../assets/images/footballfans-kids-flags.webp" alt="">
+            <img class="fans-box-img" src="@/assets/images/footballfans-kids-flags.webp" alt="">
             <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ const { isMobile, isDesktop } = useBreakpoints();
     </div>
 
     <div v-if="isMobile" class="container fans-box">
-      <img class="fans-box-img" src="../assets/images/footballfans-kids-flags.webp" alt="">
+      <img class="fans-box-img" src="@/assets/images/footballfans-kids-flags.webp" alt="">
       <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
     </div>
 
