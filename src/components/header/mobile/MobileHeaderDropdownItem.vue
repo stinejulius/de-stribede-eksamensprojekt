@@ -22,7 +22,7 @@ function toggleDropdown() {
 
 <template>
     <div>
-        <div class="menu-button" :class="{'open': isOpened}">
+        <div class="menu-button" :class="{ 'open': isOpened }">
             <button @click="toggleDropdown">
                 {{ label }}
 

@@ -79,7 +79,7 @@ const { isMobile, isDesktop } = useBreakpoints();
         <h3> Tak til vores sponsorer </h3>
       </div>
 
-      <!-- <SponsorBanner /> -->
+      <SponsorBanner />
     </div>
   </main>
 </template>

@@ -1,19 +1,30 @@
 <script setup>
-import HorizontalMarquee from '@/components/HorizontalMarquee.vue'
+import AlbaniLogo from '@/assets/images/logo-albani.png';
+import LøvbjergLogo from '@/assets/images/logo-løvbjerg.png';
+import UnisportLogo from '@/assets/images/logo-unisport.png';
+import CarlsJrLogo from '@/assets/images/logo-carls-jr.png';
+import OkLogo from '@/assets/images/logo-ok.png';
+import EnergiFynLogo from '@/assets/images/logo-energi-fyn.png';
+import OdenseBowlinghalLogo from '@/assets/images/logo-odense-bowlinghal.png';
+import ShayInksLogo from '@/assets/images/logo-shay-inks.png';
+
+const images = [
+    AlbaniLogo,
+    LøvbjergLogo,
+    UnisportLogo,
+    CarlsJrLogo,
+    OkLogo,
+    EnergiFynLogo,
+    OdenseBowlinghalLogo,
+    ShayInksLogo
+];
 </script>
 
 <template>
-
-    <HorizontalMarquee>
-        <img class="sponsor-img" src="@/assets/images/logo-albani.png" alt="">
-        <img class="sponsor-img" src="@/assets/images/logo-løvbjerg.png" alt="">
-        <img class="sponsor-img" src="@/assets/images/logo-unisport.png" alt="">
-        <img class="sponsor-img" src="@/assets/images/logo-carls-jr.png" alt="">
-        <img class="sponsor-img" src="@/assets/images/logo-ok.png" alt="">
-        <img class="sponsor-img" src="@/assets/images/logo-energi-fyn.png" alt="">
-        <img class="sponsor-img" src="@/assets/images/logo-odense-bowlinghal.png" alt="">
-        <img class="sponsor-img" src="@/assets/images/logo-shay-inks.png" alt="">
-    </HorizontalMarquee>
+        <div class="sponsor-banner">
+            <img v-for="image in images" :key="image" loading="lazy" :src="image" class="sponsor-img"
+                alt="Sponsor Logo" />
+        </div>
 </template>
 
 <style lang="scss" scoped>
