@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <div id="mobile-header-container">
+    <header id="mobile-header-container">
         <div class="container mobile-header">
             <RouterLink to="/">
                 <img src="../assets/illustrations/logo-only-main-text.svg" alt="">
@@ -14,12 +14,54 @@
                 </button>
 
                 <div id="menu-popover" popover class="menu-popover-content">
-                    <h1>hi!</h1>
+                    <RouterLink class="menu-button" to="/">
+                        <button> Forside </button>
+                    </RouterLink>
+
+                    <RouterLink class="menu-button" to="/membership">
+                        <button> Bliv medlem </button>
+                    </RouterLink>
+
+                    <RouterLink class="menu-button">
+                        <button>
+                            Fanhjørnet
+                            <img src="../assets/illustrations/mobile-menu-dropdown-arrow.svg" alt="">
+                        </button>
+                    </RouterLink>
+
+                    <RouterLink class="menu-button" to="/webshop">
+                        <button> Webshop </button>
+                    </RouterLink>
+
+                    <RouterLink class="menu-button">
+                        <button>
+                            Om os
+                            <img src="../assets/illustrations/mobile-menu-dropdown-arrow.svg" alt="">
+                        </button>
+                    </RouterLink>
+
+                    <RouterLink class="menu-button" to="/responsible-gambling">
+                        <button> Ansvarligt spil </button>
+                    </RouterLink>
+
+                    <RouterLink class="menu-button">
+                        <button>
+                            Login
+                            <img src="../assets/illustrations/login-icon.svg" alt="">
+                        </button>
+                    </RouterLink>
+
+                    <RouterLink class="menu-button">
+                        <button>
+                            Kurv
+                            <img src="../assets/illustrations/shopping-basket-icon.svg" alt="">
+                        </button>
+                    </RouterLink>
                 </div>
             </div>
         </div>
 
-    </div>
+    </header>
 </template>
 
 <style lang="scss" scoped>
@@ -38,7 +80,7 @@
     width: 100%;
     height: 60px;
 
-    a > img {
+    a>img {
         max-height: 45px;
         height: 100%;
     }
@@ -51,28 +93,66 @@
     width: 100%;
 
     button {
-        all: unset;
+        all: unset; // Removes default link style
         cursor: pointer;
 
         img {
-            max-height: 45px;
-            height: 100%;
+            max-width: 60px;
+            width: 100%;
         }
     }
 }
 
 .menu-popover-content {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 70%;
-    height: 100%;
-    background-color: #f8f8f8;
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-    padding: 20px;
     display: flex;
     flex-direction: column;
+    width: 300px;
+    padding: 16px;
+    gap: 10px;
+
+    position: fixed;
+    top: -89px;
+    right: -89.5px;
     z-index: 99; // Below the button
+
+    border-radius: 0 0 0 10px;
+    border-bottom: 3px solid $primary;
+    border-left: 3px solid $primary;
+    border-top: 0;
+    border-right: 0;
+    background-color: $secondary;
+
+    .menu-button {
+        all: unset;
+        display: flex;
+        padding: 16px;
+        cursor: pointer;
+        max-height: 50px;
+        height: 100%;
+
+
+        border-radius: 5px;
+        background-color: $header-bg;
+    }
+
+    a>button {
+        // Text style
+        font-family: $arsenal;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 100%;
+        color: $secondary-text;
+
+        // Content layout
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        img {
+            max-width: 18px;
+        }
+    }
 
     &:not(:popover-open) {
         visibility: hidden;
@@ -87,4 +167,8 @@
         transform: translateX(0); // Slide in
     }
 }
+
+// /* Glassmorphism */
+// backdrop-filter: blur(10px);
+// background: rgba(255, 255, 255, 0.116);
 </style>

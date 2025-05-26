@@ -12,9 +12,10 @@ const { isMobile, isDesktop } = useBreakpoints();
 <template>
   <main id="content">
     <div id="content-introduction">
-      <video id="hero-video" loop muted autoplay playsinline poster="../assets/images/footballfans-kids-flags.webp" src=""></video>
+      <video id="hero-video" loop muted autoplay playsinline poster="../assets/images/footballfans-kids-flags.webp"
+        src=""></video>
       <div class="container" id="headline-titles">
-        <div id="h1" >
+        <div id="h1">
           <h1> DE STRIBEDE </h1>
           <h1 class="sub-title"> OB's OFFICIELLE FANKLUB </h1>
         </div>
@@ -91,6 +92,8 @@ const { isMobile, isDesktop } = useBreakpoints();
   flex-direction: column;
   align-items: center;
   gap: 60px;
+
+  background-color: $page-bg;
 }
 
 #content-introduction {
