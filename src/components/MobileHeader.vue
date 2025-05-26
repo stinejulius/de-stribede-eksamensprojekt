@@ -168,7 +168,9 @@
     }
 }
 
-// /* Glassmorphism */
-// backdrop-filter: blur(10px);
-// background: rgba(255, 255, 255, 0.116);
+::backdrop {
+    // Glassmorphism
+    backdrop-filter: blur(3px);
+    background: rgba(255, 255, 255, 0.11);
+}
 </style>
