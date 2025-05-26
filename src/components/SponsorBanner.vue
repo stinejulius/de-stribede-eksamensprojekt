@@ -21,10 +21,9 @@ const images = [
 </script>
 
 <template>
-        <div class="sponsor-banner">
-            <img v-for="image in images" :key="image" loading="lazy" :src="image" class="sponsor-img"
-                alt="Sponsor Logo" />
-        </div>
+    <div class="sponsor-banner">
+        <img v-for="image in images" :key="image" loading="lazy" :src="image" class="sponsor-img" alt="Sponsor Logo" />
+    </div>
 </template>
 
 <style lang="scss" scoped>
