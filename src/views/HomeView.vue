@@ -12,8 +12,11 @@ const { isMobile, isDesktop } = useBreakpoints();
 <template>
   <main>
     <section class="hero-section">
-      <video class="hero-section-video" loop muted autoplay playsinline
-        poster="@/assets/images/footballfans-kids-flags.webp" src=""></video>
+      <div class="hero-section-video">
+        <video loop muted autoplay playsinline poster="@/assets/images/footballfans-kids-flags.webp"
+          src="../assets/videos/Destribede-hero.webm"></video>
+      </div>
+
       <div class="container hero-section-header">
         <div class="hero-section-title-group">
           <h1> DE STRIBEDE </h1>
@@ -54,7 +57,8 @@ const { isMobile, isDesktop } = useBreakpoints();
           </div>
 
           <div v-if="isDesktop" class="fan-showcase">
-            <img src="@/assets/images/footballfans-kids-flags.webp" alt="Nogle børn står forrest på en tribune med OB flag samt blå og hvide farver malet i ansigtet. De er glade og smilende.">
+            <img src="@/assets/images/footballfans-kids-flags.webp"
+              alt="Nogle børn står forrest på en tribune med OB flag samt blå og hvide farver malet i ansigtet. De er glade og smilende.">
             <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
           </div>
         </div>
@@ -64,7 +68,8 @@ const { isMobile, isDesktop } = useBreakpoints();
     </section>
 
     <div v-if="isMobile" class="container fan-showcase">
-      <img src="@/assets/images/footballfans-kids-flags.webp" alt="Nogle børn står forrest på en tribune med OB flag samt blå og hvide farver malet i ansigtet. De er glade og smilende.">
+      <img src="@/assets/images/footballfans-kids-flags.webp"
+        alt="Nogle børn står forrest på en tribune med OB flag samt blå og hvide farver malet i ansigtet. De er glade og smilende.">
       <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
     </div>
 
@@ -98,8 +103,19 @@ main {
     align-items: center;
 
     .hero-section-video {
-      max-height: 200px;
-      height: 100%;
+      position: relative;
+      width: 100vw; // vw = view width
+      height: 200px;
+      overflow: hidden;
+
+      video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        max-width: 500px;
+      }
     }
 
     .hero-section-header {
