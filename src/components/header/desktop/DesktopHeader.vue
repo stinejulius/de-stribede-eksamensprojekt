@@ -70,58 +70,58 @@ header {
     align-items: center;
     height: 76px;
     background-color: $header-bg;
-}
 
-.logo {
-    position: absolute;
-    top: 38px;
-    left: 0;
-    margin-left: 16px;
+    .navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-width: 1050px;
+        gap: 50px;
 
-    img {
-        width: 75px;
-        height: 75px;
-    }
-}
+        .logo {
+            position: absolute;
+            top: 38px;
+            left: 0;
+            margin-left: 16px;
 
-.navigation {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-width: 1050px;
-    gap: 50px;
-}
+            img {
+                width: 75px;
+                height: 75px;
+            }
+        }
 
-.navigation-pages {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
+        .navigation-pages {
+            display: flex;
+            align-items: center;
+            gap: 30px;
 
-.link-to-page {
-    all: unset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 7px 15px;
-    gap: 10px;
-    cursor: pointer;
+            .link-to-page {
+                all: unset;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 7px 15px;
+                gap: 10px;
+                cursor: pointer;
 
-    button {
-        all: unset;
-        color: $secondary-text;
-        font-weight: 700;
-    }
-}
+                button {
+                    all: unset;
+                    color: $secondary-text;
+                    font-weight: 700;
+                }
+            }
+        }
 
-.navigation-icons {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+        .navigation-icons {
+            display: flex;
+            align-items: center;
+            gap: 18px;
 
-    img {
-        width: 36px;
-        aspect-ratio: 1/1;
+            img {
+                width: 36px;
+                aspect-ratio: 1/1;
+            }
+        }
     }
 }
 </style>

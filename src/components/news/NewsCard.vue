@@ -24,9 +24,11 @@ const props = defineProps({
 <template>
     <div class="news-card">
         <img :src="imgFile" :alt="imgAlt">
+
         <p class="bold news-headline">
             {{ headline }}
         </p>
+        
         <RouterLink class="button-secondary bold" :to="buttonLink"> Læs nyhed </RouterLink>
     </div>
 </template>

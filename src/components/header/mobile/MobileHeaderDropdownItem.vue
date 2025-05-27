@@ -49,32 +49,31 @@ function toggleDropdown() {
     max-height: 50px;
     height: 100%;
 
-
     border-radius: 5px;
     background-color: $header-bg;
 
     &.open {
         border-radius: 5px 5px 0 0;
     }
-}
 
-button {
-    all: unset;
-    // Text style
-    font-family: $arsenal;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 100%;
-    color: $secondary-text;
+    button {
+        all: unset;
+        // Text style
+        font-family: $arsenal;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 100%;
+        color: $secondary-text;
 
-    // Content layout
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+        // Content layout
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
 
-    img {
-        max-width: 18px;
+        img {
+            max-width: 18px;
+        }
     }
 }
 
@@ -86,18 +85,18 @@ button {
     border: 3px solid $primary;
     border-top: 0;
     background-color: $tertiary;
-}
 
-.sub-label {
-    display: flex;
-    text-decoration: none;
-    padding: 16px 16px 16px 32px;
+    .sub-label {
+        display: flex;
+        padding: 16px 16px 16px 32px;
 
-    // Text style
-    font-family: $arsenal;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 100%;
-    color: $primary;
+        // Text style
+        text-decoration: none;
+        font-family: $arsenal;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 100%;
+        color: $primary;
+    }
 }
 </style>

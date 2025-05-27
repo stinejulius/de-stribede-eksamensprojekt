@@ -28,14 +28,14 @@ const newsArticles = [
         headline: 'OB er tilbage i Superligaen!',
         buttonLink: '/news/ob-er-tilbage-i-superligaen',
     },
-]
+];
 </script>
 
 <template>
-    <section id="card">
+    <section>
         <h2 class="white-color"> Nyheder </h2>
 
-        <div v-if="isMobile" id="news-slider-section">
+        <div v-if="isMobile" class="news-slider">
             <NewsCarousel>
                 <NewsCard v-for="newsArticle in newsArticles" :img-file="newsArticle.imgFile"
                     :img-alt="newsArticle.imgAlt" :headline="newsArticle.headline"
@@ -53,15 +53,7 @@ const newsArticles = [
 <style lang="scss" scoped>
 @use '@/style/base' as *;
 
-#news-slider-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-}
-
-section#card {
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,5 +62,13 @@ section#card {
 
     border-radius: 10px;
     background-color: $primary;
+
+    .news-slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+    }
 }
 </style>

@@ -34,9 +34,9 @@ const images = [
     align-items: center;
     padding: 5px 20px;
     gap: 40px;
-}
 
-.sponsor-img {
-    width: 100px;
+    .sponsor-img {
+        width: 100px;
+    }
 }
 </style>

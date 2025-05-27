@@ -16,7 +16,6 @@ import FooterBase from '@/components/footer/Footerbase.vue'
 @use '@/style/base' as *;
 
 main.glass-morphism {
-  // Glassmorphism
   filter: blur(3px);
 }
 </style>

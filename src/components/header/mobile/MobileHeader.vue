@@ -47,12 +47,11 @@ router.afterEach(() => {
         ToggleMenu(); // Close the menu on navigation
     }
 });
-
 </script>
 
 <template>
     <header ref="header">
-        <div class="container mobile-header">
+        <div class="container header-box">
             <RouterLink to="/">
                 <img src="@/assets/illustrations/logo-only-main-text.svg" alt="">
             </RouterLink>
@@ -65,6 +64,7 @@ router.afterEach(() => {
             <!-- Hidden menu, that opens on click -->
             <div v-if="isOpened" class="menu-popover-content">
                 <MobileHeaderItem label="Forside" to="/" />
+
                 <MobileHeaderItem label="Bliv medlem" to="/membership" />
 
                 <MobileHeaderDropdownItem label="Fanhjørnet" :items="[
@@ -84,7 +84,9 @@ router.afterEach(() => {
                 ]" />
 
                 <MobileHeaderItem label="Ansvarligt spil" to="/responsible-gambling" />
+
                 <MobileHeaderItem label="Login" to="/login" :icon="LoginIcon" />
+
                 <MobileHeaderItem label="Kurv" to="/basket" :icon="ShoppingBasketIcon" />
             </div>
         </div>
@@ -98,49 +100,49 @@ header {
     display: flex;
     justify-content: center;
     background-color: $header-bg;
-}
 
-.mobile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-
-    a>img {
-        max-height: 45px;
-        height: 100%;
-    }
-}
-
-button.hamburger-button {
-    all: unset; // Removes default link style
-    cursor: pointer;
-    margin-left: auto;
-
-    img {
-        max-width: 60px;
+    .header-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
+        height: 60px;
+
+        a>img {
+            max-height: 45px;
+            height: 100%;
+        }
+
+        button.hamburger-button {
+            all: unset; // Removes default link style
+            cursor: pointer;
+            margin-left: auto;
+
+            img {
+                max-width: 60px;
+                width: 100%;
+            }
+        }
+
+        .menu-popover-content {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 16px;
+            gap: 10px;
+
+            position: absolute;
+            top: 60px;
+            right: 0;
+            z-index: 100;
+
+            border-radius: 0 0 0 10px;
+            border-bottom: 3px solid $primary;
+            border-left: 3px solid $primary;
+            border-top: 0;
+            border-right: 0;
+            background-color: $secondary;
+        }
     }
-}
-
-.menu-popover-content {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    padding: 16px;
-    gap: 10px;
-
-    position: absolute;
-    top: 60px;
-    right: 0;
-    z-index: 100;
-
-    border-radius: 0 0 0 10px;
-    border-bottom: 3px solid $primary;
-    border-left: 3px solid $primary;
-    border-top: 0;
-    border-right: 0;
-    background-color: $secondary;
 }
 </style>

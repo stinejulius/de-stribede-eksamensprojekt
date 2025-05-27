@@ -39,10 +39,12 @@ onMounted(() => {
                 <slot></slot>
             </div>
         </div>
+
         <div class="carousel-navigation">
             <div v-for="(_, index) in itemCount" :key="index">
                 <img v-if="activeIndex === index" @click="goToItem(index)" class="dot-indicator"
                     src="@/assets/illustrations/active-indicator-dot.svg" alt="">
+
                 <img v-else @click="goToItem(index)" class="dot-indicator"
                     src="@/assets/illustrations/indicator-dot.svg" alt="">
             </div>
@@ -57,55 +59,55 @@ onMounted(() => {
     position: relative;
     width: 100%;
     overflow: hidden; // Ensures items don't overflow container if not perfectly sized
-}
 
-.carousel {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
-
-    // Hide scroll bar
-    scrollbar-width: none;
-    /* Firefox */
-    -ms-overflow-style: none;
-
-    /* IE and Edge */
-    &::-webkit-scrollbar {
-        display: none;
-        /* Chrome, Safari, Opera */
-    }
-
-    .carousel-items {
+    .carousel {
         display: flex;
-        width: 100%;
-        gap: 16px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
 
-        // Each direct child of carousel-items will be a snap point
-        >* {
-            flex-shrink: 0;
+        // Hide scroll bar
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+
+        /* IE and Edge */
+        &::-webkit-scrollbar {
+            display: none;
+            /* Chrome, Safari, Opera */
+        }
+
+        .carousel-items {
+            display: flex;
             width: 100%;
-            scroll-snap-align: start;
-            cursor: grab;
+            gap: 16px;
 
-            &:active {
-                cursor: grabbing;
+            // Each direct child of carousel-items will be a snap point
+            >* {
+                flex-shrink: 0;
+                width: 100%;
+                scroll-snap-align: start;
+                cursor: grab;
+
+                &:active {
+                    cursor: grabbing;
+                }
             }
         }
     }
-}
 
-.carousel-navigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    margin-top: 15px;
+    .carousel-navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        margin-top: 15px;
 
-    .dot-indicator {
-        max-width: 16px;
-        width: 100%;
+        .dot-indicator {
+            max-width: 16px;
+            width: 100%;
+        }
     }
 }
 </style>

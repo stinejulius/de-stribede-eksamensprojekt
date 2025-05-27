@@ -109,55 +109,56 @@ const formattedGameDate = computed(() => {
 </script>
 
 <template>
-    <div id="countdown-content">
+    <section>
         <h2 class="white-color"> Næste {{ gender }} Kamp </h2>
-        <div id="teams-info">
+
+        <div class="teams-box">
             <div class="team">
                 <img v-if="homeTeamLogo" class="team-logo" :src="homeTeamLogo" alt="Team logo">
                 <!-- : makes it possible to "grab" homeTeamLogo from script -->
                 <p class="bold white-color"> {{ homeTeamName }} </p>
             </div>
+
             <div>
                 <p class="bold white-color"> VS </p>
             </div>
+
             <div class="team">
                 <img v-if="awayTeamLogo" class="team-logo" :src="awayTeamLogo" alt="Team logo">
                 <p class="bold white-color"> {{ awayTeamName }} </p>
             </div>
         </div>
+
         <p class="small white-color"> {{ formattedGameDate }} </p>
-        <div id="countdown-time-section">
-            <div class="countdown-single-num-name">
-                <p class="countdown-numbers"> {{ countdownDays }} </p>
+
+        <div class="countdown-timer">
+            <div class="countdown-group">
+                <p class="number"> {{ countdownDays }} </p>
                 <p class="white-color"> Dage </p>
             </div>
-            <div class="countdown-single-num-name">
-                <p class="countdown-numbers"> {{ countdownHours }} </p>
+
+            <div class="countdown-group">
+                <p class="number"> {{ countdownHours }} </p>
                 <p class="white-color"> Timer </p>
             </div>
-            <div class="countdown-single-num-name">
-                <p class="countdown-numbers"> {{ countdownMinutes }} </p>
+
+            <div class="countdown-group">
+                <p class="number"> {{ countdownMinutes }} </p>
                 <p class="white-color"> Minutter </p>
             </div>
-            <div class="countdown-single-num-name">
-                <p class="countdown-numbers"> {{ countdownSeconds }} </p>
+
+            <div class="countdown-group">
+                <p class="number"> {{ countdownSeconds }} </p>
                 <p class="white-color"> Sekunder </p>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <style lang="scss" scoped>
 @use '@/style/base' as *;
 
-p.countdown-numbers {
-    font-family: $arsenal;
-    font-size: 26px;
-    font-weight: 700;
-    color: $secondary-text;
-}
-
-#countdown-content {
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,40 +167,47 @@ p.countdown-numbers {
 
     border-radius: 10px;
     background-color: $primary;
-}
 
-#teams-info {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-evenly;
-}
+    .teams-box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-evenly;
 
-.team {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 120px;
-    height: 100px;
-}
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 120px;
+            height: 100px;
 
-.team-logo {
-    max-width: 70px;
-    width: 100%;
-}
+            img {
+                max-width: 70px;
+                width: 100%;
+            }
+        }
+    }
 
-#countdown-time-section {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
+    .countdown-timer {
+        display: flex;
+        align-items: center;
+        gap: 22px;
 
-.countdown-single-num-name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+        .countdown-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+
+            p.number {
+                font-family: $arsenal;
+                font-size: 26px;
+                font-weight: 700;
+                color: $secondary-text;
+            }
+        }
+    }
 }
 </style>
