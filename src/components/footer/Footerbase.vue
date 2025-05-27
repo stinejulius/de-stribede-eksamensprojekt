@@ -7,17 +7,17 @@
             <div class="container footer-top-inner">
                 <div class="some-links">
                     <a href="https://www.facebook.com/odense1887" target="_blank" class="some-link">
-                        <img src="@/assets/illustrations/facebook-icon.svg" alt="">
+                        <img src="@/assets/illustrations/facebook-icon.svg" alt="Besøg De Stribedes Facebook fanside.">
                         <p> Fanside </p>
                     </a>
 
                     <a href="https://www.facebook.com/groups/256234254475573/" target="_blank" class="some-link">
-                        <img src="@/assets/illustrations/facebook-icon.svg" alt="">
+                        <img src="@/assets/illustrations/facebook-icon.svg" alt="Besøg De Stribedes Facebook gruppe.">
                         <p> Gruppe </p>
                     </a>
 
                     <a href="https://www.instagram.com/de_stribede/" target="_blank" class="some-link">
-                        <img src="@/assets/illustrations/instagram-icon.svg" alt="">
+                        <img src="@/assets/illustrations/instagram-icon.svg" alt="Besøg De Stribedes Instagram.">
                     </a>
                 </div>
 

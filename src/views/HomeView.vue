@@ -54,7 +54,7 @@ const { isMobile, isDesktop } = useBreakpoints();
           </div>
 
           <div v-if="isDesktop" class="fan-showcase">
-            <img src="@/assets/images/footballfans-kids-flags.webp" alt="">
+            <img src="@/assets/images/footballfans-kids-flags.webp" alt="Nogle børn står forrest på en tribune med OB flag samt blå og hvide farver malet i ansigtet. De er glade og smilende.">
             <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ const { isMobile, isDesktop } = useBreakpoints();
     </section>
 
     <div v-if="isMobile" class="container fan-showcase">
-      <img src="@/assets/images/footballfans-kids-flags.webp" alt="">
+      <img src="@/assets/images/footballfans-kids-flags.webp" alt="Nogle børn står forrest på en tribune med OB flag samt blå og hvide farver malet i ansigtet. De er glade og smilende.">
       <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
     </div>
 

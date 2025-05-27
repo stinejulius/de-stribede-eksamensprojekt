@@ -43,7 +43,7 @@ onMounted(() => {
         <div class="carousel-navigation">
             <div v-for="(_, index) in itemCount" :key="index">
                 <img v-if="activeIndex === index" @click="goToItem(index)" class="dot-indicator"
-                    src="@/assets/illustrations/active-indicator-dot.svg" alt="">
+                    src="@/assets/illustrations/active-indicator-dot.svg" alt="Slideshow indikator.">
 
                 <img v-else @click="goToItem(index)" class="dot-indicator"
                     src="@/assets/illustrations/indicator-dot.svg" alt="">

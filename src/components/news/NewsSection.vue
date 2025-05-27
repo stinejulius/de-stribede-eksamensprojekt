@@ -12,19 +12,19 @@ const { isMobile, isDesktop } = useBreakpoints();
 const newsArticles = [
     {
         imgFile: newsOne,
-        imgAlt: 'x',
+        imgAlt: 'Nyhed om away bustur inklusiv billet til kampen med De Stribede lørdag den 17 maj. Kampen er Kolding IF mod OB.',
         headline: 'Kom med på sæsonens sidste udebanetur',
         buttonLink: '/news/kom-med-på-saesonens-sidste-udebanetur',
     },
     {
         imgFile: newsTwo,
-        imgAlt: 'x',
+        imgAlt: 'En tribune farvet blåd og hvid af OB-fans som alle holder hvert deres halstørklæde op hvor der står "Blok B Odense".',
         headline: 'Fodboldfestival på Flakhaven!',
         buttonLink: '/news/fodboldfestival-på-flakhaven',
     },
     {
         imgFile: newsThree,
-        imgAlt: 'x',
+        imgAlt: 'Udsigt fra RMN tribunen på Nature Energy Park. Spillerne er på banen og tribunerne er fyldt op med fodboldfans.',
         headline: 'OB er tilbage i Superligaen!',
         buttonLink: '/news/ob-er-tilbage-i-superligaen',
     },

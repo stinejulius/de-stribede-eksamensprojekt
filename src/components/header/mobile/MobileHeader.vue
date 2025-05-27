@@ -53,12 +53,12 @@ router.afterEach(() => {
     <header ref="header">
         <div class="container header-box">
             <RouterLink to="/">
-                <img src="@/assets/illustrations/logo-only-main-text.svg" alt="">
+                <img src="@/assets/illustrations/logo-only-main-text.svg" alt="De Stribede forside.">
             </RouterLink>
 
             <!-- Button to open menu-->
             <button @click="ToggleMenu()" class="hamburger-button" type="button" aria-label="Open menu">
-                <img src="@/assets/illustrations/mobile-menu-icon.svg" alt="">
+                <img src="@/assets/illustrations/mobile-menu-icon.svg" alt="Menu knap.">
             </button>
 
             <!-- Hidden menu, that opens on click -->
@@ -85,9 +85,9 @@ router.afterEach(() => {
 
                 <MobileHeaderItem label="Ansvarligt spil" to="/responsible-gambling" />
 
-                <MobileHeaderItem label="Login" to="/login" :icon="LoginIcon" />
+                <MobileHeaderItem label="Login" to="/login" :icon="LoginIcon" :icon-alt="'Login knap.'" />
 
-                <MobileHeaderItem label="Kurv" to="/basket" :icon="ShoppingBasketIcon" />
+                <MobileHeaderItem label="Kurv" to="/basket" :icon="ShoppingBasketIcon" :icon-alt="'Kurv knap.'" />
             </div>
         </div>
     </header>

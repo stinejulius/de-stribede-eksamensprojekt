@@ -9,20 +9,44 @@ import OdenseBowlinghalLogo from '@/assets/images/logo-odense-bowlinghal.png';
 import ShayInksLogo from '@/assets/images/logo-shay-inks.png';
 
 const images = [
-    AlbaniLogo,
-    LøvbjergLogo,
-    UnisportLogo,
-    CarlsJrLogo,
-    OkLogo,
-    EnergiFynLogo,
-    OdenseBowlinghalLogo,
-    ShayInksLogo
+    {
+        src: AlbaniLogo,
+        alt: 'Albani logo.'
+    },
+    {
+        src: LøvbjergLogo,
+        alt: 'Løvbjerg Tarup Center logo.'
+    },
+    {
+        src: UnisportLogo,
+        alt: 'Unisport logo.'
+    },
+    {
+        src: CarlsJrLogo,
+        alt: "Carl's Jr logo."
+    },
+    {
+        src: OkLogo,
+        alt: 'OK logo.'
+    },
+    {
+        src: EnergiFynLogo,
+        alt: 'Fynsk Support EnergiFyn logo.'
+    },
+    {
+        src: OdenseBowlinghalLogo,
+        alt: 'Odense Bowlinghal & Simgolf logo.'
+    },
+    {
+        src: ShayInksLogo,
+        alt: 'Shay Inks logo.'
+    },
 ];
 </script>
 
 <template>
     <div class="sponsor-banner">
-        <img v-for="image in images" :key="image" loading="lazy" :src="image" class="sponsor-img" alt="Sponsor Logo" />
+        <img v-for="image in images" loading="lazy" :src="image.src" class="sponsor-img" :alt="image.alt" />
     </div>
 </template>
 

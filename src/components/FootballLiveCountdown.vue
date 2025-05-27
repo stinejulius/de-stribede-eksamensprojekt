@@ -114,7 +114,7 @@ const formattedGameDate = computed(() => {
 
         <div class="teams-box">
             <div class="team">
-                <img v-if="homeTeamLogo" class="team-logo" :src="homeTeamLogo" alt="Team logo">
+                <img v-if="homeTeamLogo" class="team-logo" :src="homeTeamLogo" alt="Hjemmebaneholdets logo.">
                 <!-- : makes it possible to "grab" homeTeamLogo from script -->
                 <p class="bold white-color"> {{ homeTeamName }} </p>
             </div>
@@ -124,7 +124,7 @@ const formattedGameDate = computed(() => {
             </div>
 
             <div class="team">
-                <img v-if="awayTeamLogo" class="team-logo" :src="awayTeamLogo" alt="Team logo">
+                <img v-if="awayTeamLogo" class="team-logo" :src="awayTeamLogo" alt="Udebaneholdets logo.">
                 <p class="bold white-color"> {{ awayTeamName }} </p>
             </div>
         </div>
