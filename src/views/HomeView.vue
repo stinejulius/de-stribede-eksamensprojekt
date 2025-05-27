@@ -139,6 +139,10 @@ const { isMobile, isDesktop } = useBreakpoints();
   flex-direction: column;
   align-items: center;
   gap: 30px;
+
+  h2 {
+    text-align: center;
+  }
 }
 
 .fans-box {

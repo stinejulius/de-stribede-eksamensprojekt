@@ -20,8 +20,17 @@ export function useBreakpoints() {
   const isMobile = computed(() => currentWindowWidth.value <= mobileBreakpoint);
   const isDesktop = computed(() => currentWindowWidth.value > mobileBreakpoint);
 
+  // New functionality - create custom breakpoint
+  const isWidthGreaterThanOrEqual = (threshold) => {
+    if (typeof threshold !== 'number') {
+      return ref(false); // fallback
+    }
+    return computed(() => currentWindowWidth.value >= threshold);
+  };
+
   return {
     isMobile,
     isDesktop,
+    isWidthGreaterThanOrEqual,
   };
 }
