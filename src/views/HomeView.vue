@@ -141,7 +141,7 @@ main {
 
       .hero-section-decoration {
         position: absolute;
-        top: 20px;
+        top: 40px;
         left: 50%;
         transform: translateX(-50%);
         width: 835px;

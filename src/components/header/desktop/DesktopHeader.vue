@@ -1,51 +1,39 @@
 <script setup>
+import DesktopHeaderItem from './DesktopHeaderItem.vue'
+import DesktopHeaderDropdownItem from './DesktopHeaderDropdownItem.vue'
 </script>
 
 <template>
     <header>
         <div class="container navigation">
-            <RouterLink class="logo">
-                <img src="@/assets/illustrations/logo-only-main-text.svg" alt="">
+            <RouterLink class="logo" to="/">
+                <img src="@/assets/illustrations/logo-only-main-text.svg" alt="De Stribede forside.">
             </RouterLink>
 
+            <div></div>
+
             <div class="navigation-pages">
-                <RouterLink to="/" class="link-to-page">
-                    <button>
-                        Forside
-                    </button>
-                </RouterLink>
+                <DesktopHeaderItem label="Forside" to="/"/>
 
-                <RouterLink to="/membership" class="link-to-page">
-                    <button>
-                        Bliv medlem
-                    </button>
-                </RouterLink>
+                <DesktopHeaderItem label="Bliv medlem" to="/membership"/>
 
-                <RouterLink class="link-to-page">
-                    <button>
-                        Fanhjørnet
-                        <img src="@/assets/illustrations/desktop-menu-dropdown-arrow-white.svg" alt="">
-                    </button>
-                </RouterLink>
+                <DesktopHeaderDropdownItem label="Fanhjørnet" :items="[
+                    { label: 'Busture', to: '/busrides' },
+                    { label: 'Nyheder', to: '/news' },
+                    { label: 'Sangbog', to: '/songbook' }
+                ]" />
+            
+                <DesktopHeaderItem label="Webshop" to="/webshop"/>
 
-                <RouterLink to="/webshop" class="link-to-page">
-                    <button>
-                        Webshop
-                    </button>
-                </RouterLink>
+                <DesktopHeaderDropdownItem label="Om os" :items="[
+                    { label: 'Om os', to: '/about' },
+                    { label: 'Sponsorer', to: '/sponsors' },
+                    { label: 'Vedtægter', to: '/statutes' },
+                    { label: 'TIFO Odense', to: '/tifo-odense' },
+                    { label: 'Fanmap', to: '/fanmap' },
+                ]" />
 
-                <RouterLink class="link-to-page">
-                    <button>
-                        Om os
-                        <img src="@/assets/illustrations/desktop-menu-dropdown-arrow-white.svg" alt="">
-                    </button>
-                </RouterLink>
-
-                <RouterLink to="/responsible-gambling" class="link-to-page">
-                    <button>
-                        Ansvarligt spil
-                    </button>
-                </RouterLink>
+                <DesktopHeaderItem label="Ansvarligt spil" to="/responsible-gambling"/>
             </div>
 
             <div class="navigation-icons">
@@ -72,17 +60,19 @@ header {
     background-color: $header-bg;
 
     .navigation {
+        position: relative;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
         min-width: 1050px;
-        gap: 50px;
+        width: 100%;
 
         .logo {
             position: absolute;
-            top: 38px;
+            top: 20px;
             left: 0;
             margin-left: 16px;
+            z-index: 120;
 
             img {
                 width: 75px;
@@ -94,22 +84,6 @@ header {
             display: flex;
             align-items: center;
             gap: 30px;
-
-            .link-to-page {
-                all: unset;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 7px 15px;
-                gap: 10px;
-                cursor: pointer;
-
-                button {
-                    all: unset;
-                    color: $secondary-text;
-                    font-weight: 700;
-                }
-            }
         }
 
         .navigation-icons {
