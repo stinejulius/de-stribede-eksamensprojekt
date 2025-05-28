@@ -13,7 +13,7 @@ const { isMobile, isDesktop } = useBreakpoints();
     <section class="hero-section">
       <div class="hero-section-video">
         <video loop muted autoplay playsinline poster="@/assets/images/footballfans-kids-flags.webp"
-          src="../assets/videos/Destribede-hero.webm"></video>
+          src="../assets/videos/hero-video.webm"></video>
       </div>
 
       <div class="container hero-section-header">
