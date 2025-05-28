@@ -22,6 +22,11 @@ const { isMobile, isDesktop } = useBreakpoints();
           <h1 class="sub-title"> OB's OFFICIELLE FANKLUB </h1>
         </div>
         <h2 class="slogan"> Stemning der rækker længere end Fyn </h2>
+
+        <div v-if="isDesktop" class="hero-section-decoration">
+          <img src="../assets/illustrations/lindorm-facing-right.svg" alt="">
+          <img src="../assets/illustrations/lindorm-facing-left.svg" alt="">
+        </div>
       </div>
     </section>
 
@@ -120,6 +125,7 @@ main {
     }
 
     .hero-section-header {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -131,6 +137,18 @@ main {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+      }
+
+      .hero-section-decoration {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 835px;
+        height: 150px;
+
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
