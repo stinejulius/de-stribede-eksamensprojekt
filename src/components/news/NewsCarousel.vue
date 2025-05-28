@@ -1,27 +1,38 @@
 <script setup>
 import { ref, onMounted, useTemplateRef } from 'vue';
 
-const carouselRef = useTemplateRef('carousel');
+// Global variables
+const carouselRef = useTemplateRef('carousel'); // find 'carousel' in template, store it in variable
 const activeIndex = ref(0);
 
 const itemCount = ref(3);
 
+/**
+ * Handle Scroll, will update activeIndex based on scrollLeft on carouselRef
+ * Updates activeIndex
+ */
 const handleScroll = () => {
     if (!carouselRef.value) return;
 
-    const scrollLeft = carouselRef.value.scrollLeft;
-    const itemWidth = carouselRef.value.clientWidth; // might have to change this according to the newscard widths
+    const scrollLeft = carouselRef.value.scrollLeft; // Amount of pixels scolled to the left
+    const itemWidth = carouselRef.value.clientWidth; // Width of a NewsCard
 
     // Determie the active item based on scroll position
     activeIndex.value = Math.round(scrollLeft / itemWidth);
 };
 
+/**
+ * Handle Click on "dot"
+ * Will adjust scroll on 'carousel', to a specific NewsCard
+ * 
+ * @param index 
+ */
 const goToItem = (index) => {
     if (!carouselRef.value) return;
 
-    const itemWidth = carouselRef.value.clientWidth;
+    const itemWidth = carouselRef.value.clientWidth; // Width of a NewsCard
     carouselRef.value.scrollTo({
-        left: index * itemWidth,
+        left: index * itemWidth, // Scroll left X * NewsCard width
         behavior: 'smooth',
     });
 };

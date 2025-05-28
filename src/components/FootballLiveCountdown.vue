@@ -20,6 +20,7 @@ const props = defineProps({
     },
 })
 
+// Global varibales
 const homeTeamName = ref(null);
 const homeTeamLogo = ref(null);
 const awayTeamName = ref(null);
@@ -48,7 +49,7 @@ async function GetData() {
     // Updates Game Info
     const gameObject = result.response[0];
 
-    // If no match was found, function stops here
+    // If no match was found, function stops here and fills in "blanks"
     if (gameObject === undefined) {
         countdownDays.value = 'X';
         countdownHours.value = 'X';
@@ -112,6 +113,7 @@ const formattedGameDate = computed(() => {
     <section>
         <h2 class="white-color"> Næste {{ gender }} Kamp </h2>
 
+        <!-- Teams information -->
         <div class="teams-box">
             <div class="team">
                 <img v-if="homeTeamLogo" class="team-logo" loading="lazy" :src="homeTeamLogo" alt="Hjemmebaneholdets logo.">
@@ -129,8 +131,10 @@ const formattedGameDate = computed(() => {
             </div>
         </div>
 
+        <!-- Game date -->
         <p class="small white-color"> {{ formattedGameDate }} </p>
 
+        <!-- Countdown -->
         <div class="countdown-timer">
             <div class="countdown-group">
                 <p class="number"> {{ countdownDays }} </p>

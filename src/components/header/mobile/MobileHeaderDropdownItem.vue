@@ -11,10 +11,13 @@ const props = defineProps({
         type: Array,
         required: true
     }
-})
+});
 
-const isOpened = ref(false)
+const isOpened = ref(false);
 
+/**
+ * Toggles the menu
+ */
 function toggleDropdown() {
     isOpened.value = !isOpened.value; // ! - be the opposite of what you are
 }

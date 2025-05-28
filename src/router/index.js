@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '@/views/HomeView.vue'
 
+// Placeholder, for pages not implemented
 const Placeholder = { template: '<div></div>' }
 
 const router = createRouter({
@@ -11,6 +12,8 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
+
+    // Placeholders
     {
       path: '/membership',
       name: 'membership',

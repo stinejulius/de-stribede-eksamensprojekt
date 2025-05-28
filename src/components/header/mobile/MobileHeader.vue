@@ -8,11 +8,14 @@ import MobileHeaderItem from './MobileHeaderItem.vue';
 import LoginIcon from '@/assets/illustrations/login-icon.svg';
 import ShoppingBasketIcon from '@/assets/illustrations/shopping-basket-icon.svg';
 
-const header = useTemplateRef('header');
+// Global variables
+const header = useTemplateRef('header'); // find 'header' in template, store it in variable
 const isOpened = ref(false);
 
 /**
- * 
+ * Toggles the menu, depending on isOpened
+ * Adds glass-morphism to main in App.vue
+ * Adds event listener, to handle clicks outside
  */
 function ToggleMenu() {
     isOpened.value = !isOpened.value; // ! - be the opposite of what you are
@@ -29,6 +32,8 @@ function ToggleMenu() {
 }
 
 /**
+ * Handles Clicks Outside the menu
+ * TogglesMenu if click was outside of the menu
  * 
  * @param event 
  */
@@ -39,9 +44,10 @@ function HandleClickOutside(event) {
     }
 }
 
+// Vue Router
 const router = useRouter();
 
-// Handle navigation
+// After each navigation, close the menu
 router.afterEach(() => {
     if (isOpened.value) {
         ToggleMenu(); // Close the menu on navigation

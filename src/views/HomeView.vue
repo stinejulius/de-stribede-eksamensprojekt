@@ -10,6 +10,7 @@ const { isMobile, isDesktop } = useBreakpoints();
 
 <template>
   <main>
+    <!-- ==================== Hero section ==================== -->
     <section class="hero-section">
       <div class="hero-section-video">
         <video loop muted autoplay playsinline poster="@/assets/images/footballfans-kids-flags.webp"
@@ -30,6 +31,7 @@ const { isMobile, isDesktop } = useBreakpoints();
       </div>
     </section>
 
+    <!-- ==================== Description section ==================== -->
     <section class="container description-section">
       <p>
         De Stribede er Odense Boldklubs officielle fanklub. Her mødes fans der holder af klubben og fællesskabet med
@@ -40,11 +42,13 @@ const { isMobile, isDesktop } = useBreakpoints();
       </p>
     </section>
 
+    <!-- ==================== Countdown section ==================== -->
     <section class="container countdown-section">
       <FootballLiveCountdown :gender="'Herre'" :league="120" :season="2024" :team="405" />
       <FootballLiveCountdown :gender="'Kvinde'" :league="638" :season="2024" :team="13984" />
     </section>
 
+    <!-- ==================== Membership section ==================== -->
     <section class="membership-section">
       <div class="container membership-section-inner">
         <h2> Bliv en del af De Stribede i dag! </h2>
@@ -79,10 +83,12 @@ const { isMobile, isDesktop } = useBreakpoints();
       <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
     </div>
 
+    <!-- ==================== News section ==================== -->
     <section class="container">
       <NewsSection />
     </section>
 
+    <!-- ==================== Sponsor section ==================== -->
     <section class="sponsor-section">
       <div class="container sponsor-section-header">
         <h3> Tak til vores sponsorer </h3>
