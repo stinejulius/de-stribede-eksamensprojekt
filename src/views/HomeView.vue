@@ -24,8 +24,8 @@ const { isMobile, isDesktop } = useBreakpoints();
         <h2 class="slogan"> Stemning der rækker længere end Fyn </h2>
 
         <div v-if="isDesktop" class="hero-section-decoration">
-          <img src="../assets/illustrations/lindorm-facing-right.svg" alt="">
-          <img src="../assets/illustrations/lindorm-facing-left.svg" alt="">
+          <img loading="lazy" src="../assets/illustrations/lindorm-facing-right.svg" alt="">
+          <img loading="lazy" src="../assets/illustrations/lindorm-facing-left.svg" alt="">
         </div>
       </div>
     </section>
@@ -62,7 +62,7 @@ const { isMobile, isDesktop } = useBreakpoints();
 
           <div v-if="isDesktop" class="fan-showcase">
             <div class="fan-showcase-imgbox">
-              <img src="@/assets/images/footballfans-kids-flags.webp"
+              <img loading="lazy" src="@/assets/images/footballfans-kids-flags.webp"
                 alt="Nogle børn står forrest på en tribune med OB flag samt blå og hvide farver malet i ansigtet. De er glade og smilende.">
             </div>
             <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
@@ -74,7 +74,7 @@ const { isMobile, isDesktop } = useBreakpoints();
     </section>
 
     <div v-if="isMobile" class="container fan-showcase">
-      <img src="@/assets/images/footballfans-kids-flags.webp"
+      <img loading="lazy" src="@/assets/images/footballfans-kids-flags.webp"
         alt="Nogle børn står forrest på en tribune med OB flag samt blå og hvide farver malet i ansigtet. De er glade og smilende.">
       <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
     </div>

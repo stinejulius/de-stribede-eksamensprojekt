@@ -45,20 +45,28 @@ const images = [
 </script>
 
 <template>
-    <div class="sponsor-banner">
-        <img v-for="image in images" loading="lazy" :src="image.src" class="sponsor-img" :alt="image.alt" />
+    <div class="sponsor-banner-container">
+        <div class="sponsor-banner">
+            <img v-for="image in images" loading="lazy" :src="image.src" class="sponsor-img" :alt="image.alt" />
+        </div>
     </div>
 </template>
 
 <style lang="scss" scoped>
 @use '@/style/base' as *;
 
-.sponsor-banner {
+.sponsor-banner-container {
     display: flex;
     align-items: center;
-    padding: 5px 20px;
-    gap: 40px;
     overflow: hidden;
+
+    .sponsor-banner {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 5px 20px;
+        max-width: 100vw;
+    }
 
     .sponsor-img {
         width: 100px;

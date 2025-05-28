@@ -37,12 +37,12 @@ import DesktopHeaderDropdownItem from './DesktopHeaderDropdownItem.vue'
             </nav>
 
             <div class="navigation-icons">
-                <RouterLink>
-                    <img src="@/assets/illustrations/login-icon.svg" alt="">
+                <RouterLink to="/login">
+                    <img loading="lazy" src="@/assets/illustrations/login-icon.svg" alt="">
                 </RouterLink>
 
-                <RouterLink>
-                    <img src="@/assets/illustrations/shopping-basket-icon.svg" alt="">
+                <RouterLink to="/basket">
+                    <img loading="lazy" src="@/assets/illustrations/shopping-basket-icon.svg" alt="">
                 </RouterLink>
             </div>
         </div>

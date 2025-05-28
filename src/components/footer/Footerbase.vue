@@ -7,21 +7,21 @@
             <div class="container footer-top-inner">
                 <div class="some-links">
                     <a href="https://www.facebook.com/odense1887" target="_blank" class="some-link">
-                        <img src="@/assets/illustrations/facebook-icon.svg" alt="Besøg De Stribedes Facebook fanside.">
+                        <img loading="lazy" src="@/assets/illustrations/facebook-icon.svg" alt="Besøg De Stribedes Facebook fanside.">
                         <p> Fanside </p>
                     </a>
 
                     <a href="https://www.facebook.com/groups/256234254475573/" target="_blank" class="some-link">
-                        <img src="@/assets/illustrations/facebook-icon.svg" alt="Besøg De Stribedes Facebook gruppe.">
+                        <img loading="lazy" src="@/assets/illustrations/facebook-icon.svg" alt="Besøg De Stribedes Facebook gruppe.">
                         <p> Gruppe </p>
                     </a>
 
                     <a href="https://www.instagram.com/de_stribede/" target="_blank" class="some-link">
-                        <img src="@/assets/illustrations/instagram-icon.svg" alt="Besøg De Stribedes Instagram.">
+                        <img loading="lazy" src="@/assets/illustrations/instagram-icon.svg" alt="Besøg De Stribedes Instagram.">
                     </a>
                 </div>
 
-                <div class="policy-terms-links">
+                <nav class="policy-terms-links">
                     <RouterLink to="/privacy-policy">
                         <p class="white-color"> Privatlivspolitik </p>
                     </RouterLink>
@@ -29,7 +29,7 @@
                     <RouterLink to="/terms-and-conditions">
                         <p class="white-color"> Handelsbetingelser </p>
                     </RouterLink>
-                </div>
+                </nav>
             </div>
         </div>
 

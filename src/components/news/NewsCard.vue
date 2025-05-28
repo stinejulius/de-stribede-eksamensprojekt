@@ -22,15 +22,15 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="news-card">
-        <img :src="imgFile" :alt="imgAlt">
+    <article class="news-card">
+        <img loading="lazy" :src="imgFile" :alt="imgAlt">
 
         <p class="bold news-headline">
             {{ headline }}
         </p>
         
         <RouterLink class="button-secondary bold" :to="buttonLink"> Læs nyhed </RouterLink>
-    </div>
+    </article>
 </template>
 
 <style lang="scss" scoped>

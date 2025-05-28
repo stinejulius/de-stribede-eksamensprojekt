@@ -62,7 +62,7 @@ router.afterEach(() => {
             </button>
 
             <!-- Hidden menu, that opens on click -->
-            <div v-if="isOpened" class="menu-popover-content">
+            <nav v-if="isOpened" class="menu-popover-content">
                 <MobileHeaderItem label="Forside" to="/" />
 
                 <MobileHeaderItem label="Bliv medlem" to="/membership" />
@@ -88,7 +88,7 @@ router.afterEach(() => {
                 <MobileHeaderItem label="Login" to="/login" :icon="LoginIcon" :icon-alt="'Login knap.'" />
 
                 <MobileHeaderItem label="Kurv" to="/basket" :icon="ShoppingBasketIcon" :icon-alt="'Kurv knap.'" />
-            </div>
+            </nav>
         </div>
     </header>
 </template>

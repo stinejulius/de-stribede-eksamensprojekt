@@ -66,22 +66,22 @@ const router = createRouter({
       name: 'songbook',
       component: Placeholder,
     },
-        {
+    {
       path: '/about',
       name: 'about',
       component: Placeholder,
     },
-        {
+    {
       path: '/sponsors',
       name: 'sponsors',
       component: Placeholder,
     },
-        {
+    {
       path: '/statutes',
       name: 'statutes',
       component: Placeholder,
     },
-        {
+    {
       path: '/tifo-odense',
       name: 'tifo-odense',
       component: Placeholder,
@@ -89,6 +89,16 @@ const router = createRouter({
     {
       path: '/fanmap',
       name: 'fanmap',
+      component: Placeholder,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Placeholder,
+    },
+    {
+      path: '/basket',
+      name: 'basket',
       component: Placeholder,
     },
   ],
