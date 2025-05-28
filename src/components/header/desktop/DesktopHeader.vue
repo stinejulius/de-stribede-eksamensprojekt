@@ -10,9 +10,9 @@ import DesktopHeaderDropdownItem from './DesktopHeaderDropdownItem.vue'
                 <img src="@/assets/illustrations/logo-only-main-text.svg" alt="De Stribede forside.">
             </RouterLink>
 
-            <div></div>
+            <div class="empty-box"></div>
 
-            <div class="navigation-pages">
+            <nav class="navigation-pages">
                 <DesktopHeaderItem label="Forside" to="/"/>
 
                 <DesktopHeaderItem label="Bliv medlem" to="/membership"/>
@@ -34,7 +34,7 @@ import DesktopHeaderDropdownItem from './DesktopHeaderDropdownItem.vue'
                 ]" />
 
                 <DesktopHeaderItem label="Ansvarligt spil" to="/responsible-gambling"/>
-            </div>
+            </nav>
 
             <div class="navigation-icons">
                 <RouterLink>
@@ -78,6 +78,10 @@ header {
                 width: 75px;
                 height: 75px;
             }
+        }
+
+        .empty-box {
+            width: 60px;
         }
 
         .navigation-pages {
