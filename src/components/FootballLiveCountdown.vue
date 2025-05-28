@@ -210,4 +210,12 @@ section {
         }
     }
 }
+
+// ==================== MEDIA QUERIES ====================
+@media only screen and (min-width: 901px) {
+    section {
+        padding: 32px 0;
+        width: 100%;
+    }
+}
 </style>

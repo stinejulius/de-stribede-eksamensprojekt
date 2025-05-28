@@ -59,7 +59,6 @@ const images = [
     padding: 5px 20px;
     gap: 40px;
     overflow: hidden;
-    width: 100vw;
 
     .sponsor-img {
         width: 100px;

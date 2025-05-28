@@ -58,4 +58,23 @@ const props = defineProps({
         text-align: center;
     }
 }
+
+// ==================== MEDIA QUERIES ====================
+@media only screen and (min-width: 901px) {
+    .news-card {
+        max-width: 360px;
+        border: 3px solid $primary;
+        box-shadow: 2px 4px 4px 0 rgba(7, 84, 140, 0.25);
+
+        img {
+            max-width: 328px;
+            max-width: 328px;
+        }
+
+        .news-headline {
+            max-width: 328px;
+            height: 37px;
+        }
+    }
+}
 </style>

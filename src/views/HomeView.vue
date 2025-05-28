@@ -6,7 +6,6 @@ import SponsorBanner from '@/components/SponsorBanner.vue';
 import { useBreakpoints } from '@/composables/breakpoints';
 
 const { isMobile, isDesktop } = useBreakpoints();
-
 </script>
 
 <template>
@@ -26,7 +25,7 @@ const { isMobile, isDesktop } = useBreakpoints();
       </div>
     </section>
 
-    <section class="container">
+    <section class="container description-section">
       <p>
         De Stribede er Odense Boldklubs officielle fanklub. Her mødes fans der holder af klubben og fællesskabet med
         hinanden. <br> <br>Hos De Stribede er alle velkommen og vi sætter en stor ære i at kunne repræsentere en stor og
@@ -47,7 +46,7 @@ const { isMobile, isDesktop } = useBreakpoints();
 
         <div class="membership-section-details">
           <div class="membership-section-text-content">
-            <p>
+            <p :class="{ 'white-color': isDesktop }">
               For kun 150kr om året kan du blive medlem af De Stribede, hvor du vil få adgang til en lang række fordele!
               <br>
               <br>Få adgang til socialt samvær i klubhuset på Nature Energy Park, hvor du kan købe øl og vand til
@@ -57,8 +56,10 @@ const { isMobile, isDesktop } = useBreakpoints();
           </div>
 
           <div v-if="isDesktop" class="fan-showcase">
-            <img src="@/assets/images/footballfans-kids-flags.webp"
-              alt="Nogle børn står forrest på en tribune med OB flag samt blå og hvide farver malet i ansigtet. De er glade og smilende.">
+            <div class="fan-showcase-imgbox">
+              <img src="@/assets/images/footballfans-kids-flags.webp"
+                alt="Nogle børn står forrest på en tribune med OB flag samt blå og hvide farver malet i ansigtet. De er glade og smilende.">
+            </div>
             <p class="img-credit"> Fotograf: Kent Koll Rasmussen </p>
           </div>
         </div>
@@ -77,8 +78,8 @@ const { isMobile, isDesktop } = useBreakpoints();
       <NewsSection />
     </section>
 
-    <section>
-      <div class="container sponsor-section">
+    <section class="sponsor-section">
+      <div class="container sponsor-section-header">
         <h3> Tak til vores sponsorer </h3>
       </div>
 
@@ -172,6 +173,101 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+
+    .sponsor-section-header {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+// ==================== MEDIA QUERIES ====================
+@media only screen and (min-width: 901px) {
+  main {
+    gap: 76px;
+
+    .hero-section {
+      .hero-section-video {
+        height: 300px;
+
+        video {
+          max-width: 1200px;
+        }
+      }
+
+      .hero-section-header {
+        padding-top: 48px;
+      }
+    }
+
+    .description-section {
+      max-width: 500px;
+    }
+
+    .countdown-section {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 32px;
+      width: 100%;
+    }
+
+    .membership-section {
+      padding: 48px 0;
+
+      .membership-section-inner {
+        gap: 48px;
+
+        .membership-section-details {
+          display: flex;
+          justify-content: space-between;
+          gap: 32px;
+          width: 100%;
+
+          .membership-section-text-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 16px;
+
+            height: 300px;
+            // Allow Grow, Shrink & Try to be 50% width
+            flex: 1 1 50%;
+
+            border-radius: 5px;
+            background-color: $primary;
+          }
+
+          .fan-showcase {
+            // Allow Grow, Shrink & Try to be 50% width
+            flex: 1 1 50%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            .fan-showcase-imgbox {
+              position: relative;
+              overflow: hidden;
+              height: 300px;
+              border-radius: 5px;
+
+              img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sponsor-section {
+      gap: 48px;
+      padding-bottom: 76px;
+    }
   }
 }
 </style>

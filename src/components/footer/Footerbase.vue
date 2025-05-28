@@ -21,13 +21,15 @@
                     </a>
                 </div>
 
-                <RouterLink to="/privacy-policy">
-                    <p class="white-color"> Privatlivspolitik </p>
-                </RouterLink>
+                <div class="policy-terms-links">
+                    <RouterLink to="/privacy-policy">
+                        <p class="white-color"> Privatlivspolitik </p>
+                    </RouterLink>
 
-                <RouterLink to="/terms-and-conditions">
-                    <p class="white-color"> Handelsbetingelser </p>
-                </RouterLink>
+                    <RouterLink to="/terms-and-conditions">
+                        <p class="white-color"> Handelsbetingelser </p>
+                    </RouterLink>
+                </div>
             </div>
         </div>
 
@@ -54,7 +56,8 @@ footer {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 30px 0;
+            padding-top: 30px;
+            padding-bottom: 30px;
             gap: 30px;
 
             .some-links {
@@ -79,6 +82,13 @@ footer {
                     }
                 }
             }
+
+            .policy-terms-links {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
         }
     }
 
@@ -94,5 +104,34 @@ footer {
 a {
     all: unset;
     cursor: pointer;
+}
+
+// ==================== MEDIA QUERIES ====================
+@media only screen and (min-width: 901px) {
+    footer {
+        .footer-top {
+            .footer-top-inner {
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                height: 100px;
+
+                .some-links {
+                    gap: 22px;
+
+                    .some-link {
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+
+                .policy-terms-links {
+                    flex-direction: row;
+                    gap: 75px;
+                }
+            }
+        }
+    }
 }
 </style>

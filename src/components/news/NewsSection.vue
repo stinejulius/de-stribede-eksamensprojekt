@@ -33,7 +33,7 @@ const newsArticles = [
 
 <template>
     <section>
-        <h2 class="white-color"> Nyheder </h2>
+        <h2 :class="{'white-color': isMobile}"> Nyheder </h2>
 
         <div v-if="isMobile" class="news-slider">
             <NewsCarousel>
@@ -43,7 +43,7 @@ const newsArticles = [
             </NewsCarousel>
         </div>
 
-        <div v-if="isDesktop">
+        <div v-if="isDesktop" class="news-cards-box-desktop">
             <NewsCard v-for="newsArticle in newsArticles" :img-file="newsArticle.imgFile" :img-alt="newsArticle.imgAlt"
                 :headline="newsArticle.headline" :button-link="newsArticle.buttonLink" />
         </div>
@@ -57,7 +57,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px;
+    padding-top: 16px;
     gap: 16px;
 
     border-radius: 10px;
@@ -69,6 +69,24 @@ section {
         align-items: center;
         gap: 16px;
         width: 100%;
+        padding: 16px;
+    }
+}
+
+// ==================== MEDIA QUERIES ====================
+@media only screen and (min-width: 901px) {
+    section {
+        gap: 48px;
+        border-radius: unset;
+        background-color: unset;
+
+        .news-cards-box-desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            width: 100%;
+        }
     }
 }
 </style>
